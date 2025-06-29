@@ -241,7 +241,7 @@ yarn lint
 
 | Network        | RPC URL                        | Chain ID | Status |
 | -------------- | ------------------------------ | -------- | ------ |
-| Citrea Testnet | https://rpc.testnet.citrea.xyz | 2023     | ✅     |
+| Citrea Testnet | https://rpc.testnet.citrea.xyz | 5115     | ✅     |
 
 ## 🔒 Security
 
