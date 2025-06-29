@@ -3,10 +3,9 @@ import { Check, ChevronDown, CreditCard, Gift, Palette, User, Wallet } from 'luc
 import Button from './Button';
 import { cn } from '@/lib/utils';
 import { toast } from "@/components/ui/use-toast";
-import { useAccount, useWriteContract, useSimulateContract, useReadContract } from 'wagmi';
-import { USDC, GiftContractAddress } from '@/constant';
+import { useAccount } from 'wagmi';
+
 import { ethers } from 'ethers';
-import { tokenAbi } from '@/contract/token';
 import useDeployNewGift from '@/hooks/useDeployNewGift';
 import { ErrorDecoder } from 'ethers-decode-error'
 import type { DecodedError } from 'ethers-decode-error'
@@ -63,20 +62,14 @@ const GiftCardCustomizer = ({ onUpdate }: GiftCardCustomizerProps) => {
 
   const { address } = useAccount();
 
-  const { data: userReadAllowance } = useReadContract({
-    abi: tokenAbi,
-    address: USDC,
-    functionName: "allowance",
-    args: [address, GiftContractAddress],
-
-  })
+ 
 
   const amountGwi = ethers.parseUnits(amount.toString(), 6)
 
   const { handleCreateContract, cardIdE } = useDeployNewGift({
     recipient, amount: amountGwi.toString(), mail: mailAddress
   })
-  const { writeContractAsync } = useWriteContract()
+ 
 
 
 
