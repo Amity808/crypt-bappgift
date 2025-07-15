@@ -159,7 +159,7 @@ const GiftCardCustomizer = ({ onUpdate }: GiftCardCustomizerProps) => {
       
         const result = await handleCreateContract();
 
-        if (cardIdE) {
+        if (result) {
           const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}/claim/${cardIdE}`;
           const res = await sendEmail({ link: baseURL, recipentName: recipientName, address: address, email: mailAddress, subjectLine: message })
           console.log(res, 'res');
