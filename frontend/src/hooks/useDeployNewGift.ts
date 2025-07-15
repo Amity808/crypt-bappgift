@@ -37,8 +37,8 @@ const useDeployNewGift = ({ recipient, amount, mail }: Params) => {
 
         try {
             // Convert amount to wei and add as value to the transaction
-            const amountInWei = ethers.parseEther(amount);
-            const tx = await factoryContract.createGiftcard(recipient, mail, { value: amountInWei });
+            // const amountInWei = ethers.parseUnits(amount);
+            const tx = await factoryContract.createGiftcard(recipient, mail, { value: amount });
             const receipt = await tx.wait(1);
             if (receipt.status === 0) {
                 throw new Error("Transation failed");

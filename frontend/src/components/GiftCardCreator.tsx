@@ -7,7 +7,7 @@ const GiftCardCreator = () => {
   const [cardData, setCardData] = useState({
     recipient: '',
     amount: 0.05,
-    currency: 'ETH',
+    currency: 'CBTC',
     message: '',
     theme: 'blue' as 'blue' | 'purple' | 'green' | 'gold',
   });

@@ -41,7 +41,7 @@ const GiftCardCustomizer = ({ onUpdate }: GiftCardCustomizerProps) => {
   const [recipient, setRecipient] = useState('');
   const [recipientName, setRecipientName] = useState('')
   const [amount, setAmount] = useState(1);
-  const [currency, setCurrency] = useState('ETH');
+  const [currency, setCurrency] = useState('CBTC');
   const [message, setMessage] = useState<string>('');
   const [mailAddress, setMailAddress] = useState('')
   const [theme, setTheme] = useState<'blue' | 'purple' | 'green' | 'gold'>('blue');
