@@ -8,7 +8,7 @@ import { useAccount, useChainId, useConfig } from "wagmi";
 import { toast } from 'sonner';
 // import { Factory } from "@/constant";
 import { GiftContractAddress } from "@/constant";
-import { ethers } from "ethers";
+// import { ethers } from "ethers";
 
 interface Params {
     recipient: string;
