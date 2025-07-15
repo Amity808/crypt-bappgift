@@ -23,19 +23,8 @@ interface GiftCardClaimFormProps {
 }
 
 export function GiftCardClaimForm({ giftCard, cardId }: GiftCardClaimFormProps) {
-  // const [walletAddress, setWalletAddress] = useState("");
-  // const [isValid, setIsValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // const { address } = useAccount();
-
-  // Simple validation function - in a real app, this would be more sophisticated
-  // const validateWalletAddress = (address: string) => {
-  //   // This is a very simple validation - just checking if it looks like an Ethereum address
-  //   // In a real app, you'd want to do proper blockchain-specific validation
-  //   const isValidEth = /^0x[a-fA-F0-9]{40}$/.test(address);
-  //   // setIsValid(isValidEth);
-  //   return isValidEth;
-  // };
+ 
   const { writeContractAsync } = useWriteContract()
   const { data: simulate } = useSimulateContract({
     abi: GiftAbi,

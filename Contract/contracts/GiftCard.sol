@@ -121,7 +121,7 @@ contract GiftCardContract is ReentrancyGuard {
         // Get 5% of the pool balance
         uint256 amount = (card.poolBalance * 5) / 100;
 
-        // Transfer ETH to recipient
+        // Transfer CBTC to recipient
         (bool success, ) = payable(msg.sender).call{value: amount}("");
         if (!success) revert Insufficient_Funds();
 
@@ -261,6 +261,6 @@ contract GiftCardContract is ReentrancyGuard {
         if (!success) revert Insufficient_Funds();
     }
 
-    // Function to receive ETH
+    // Function to receive CBTC
     receive() external payable {}
 }

@@ -16,7 +16,7 @@ const GiftCardPreview = ({ recipient, amount, currency, message, theme }: GiftCa
     switch (currency) {
       case 'BTC':
         return <Bitcoin className="h-5 w-5" />;
-      case 'ETH':
+      case 'CBTC':
         return (
           <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L11.988 8.25434V16.0309L12 16.0418L16.2978 13.6243L12 2Z" fill="currentColor"/>

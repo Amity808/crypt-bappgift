@@ -53,7 +53,7 @@ const GiftCardCustomizer = ({ onUpdate }: GiftCardCustomizerProps) => {
   const handleClear = () => {
     setRecipient('');
     setAmount(0);
-    setCurrency('ETH');
+    setCurrency('CBTC');
     setMessage('');
     setMailAddress('')
     setRecipientName('')
@@ -74,9 +74,7 @@ const GiftCardCustomizer = ({ onUpdate }: GiftCardCustomizerProps) => {
 
 
   const currencies = [
-    { id: 'BTC', name: 'EDU', min: 0.001, max: 1 },
-    { id: 'ETH', name: 'UDC', min: 0.01, max: 10 },
-    { id: 'USDT', name: 'USDT', min: 10, max: 1000 },
+    { id: 'BTC', name: 'CBTC', min: 0.001, max: 1 }
   ];
 
   const debouncedUpdate = debounce((data) => {
@@ -269,7 +267,7 @@ const GiftCardCustomizer = ({ onUpdate }: GiftCardCustomizerProps) => {
                 onChange={(e) => handleInputChange('amount', e.target.value)}
                 min={selectedCurrency?.min || 0}
                 max={selectedCurrency?.max || 100}
-                step={selectedCurrency?.id === 'BTC' ? 0.001 : selectedCurrency?.id === 'ETH' ? 0.01 : 1}
+                step={selectedCurrency?.id === 'BTC' ? 0.001 : selectedCurrency?.id === 'BTC' ? 0.01 : 1}
                 className="block w-full pl-10 rounded-lg border-gray-300 shadow-sm focus:border-crypto-blue focus:ring-crypto-blue input-focus-ring py-2 border"
                 placeholder="Enter amount"
               />
